@@ -11,6 +11,6 @@ public class Main {
             answer = Math.max(answer, Integer.parseInt(st.nextToken()));
         }
 
-        System.out.println(answ)
+        System.out.println(answer);
     }
 }
