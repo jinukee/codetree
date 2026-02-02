@@ -12,24 +12,25 @@ public class Main {
             arr[i] = sc.nextInt();
 
         bubbleSort(arr, n);
-        Arrays.stream(arr).forEach((num) -> sb.append(num).append(" "));
+        Arrays.stream(arr).forEach((num)->sb.append(num).append(" "));
         System.out.println(sb);
     }
 
-    private static void bubbleSort(int[] arr, int size) {
+    private static int bubbleSort(int[] arr, int size) {
         boolean sorted = true;
+        int count = 0;
         do {
             sorted = true;
             for (int i = 0; i < size - 1; i++) {
-                for (int j = 0; j < size - 1 - i; j++) {
-                    if (arr[j] > arr[j + 1]) {
-                        int temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                        sorted = false;
-                    }
+                if (arr[i] > arr[i + 1]) {
+                    int temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                    sorted = false;
                 }
             }
-        } while (sorted == false);
+            count++;
+        } while (!sorted);
+        return count;
     }
 }
