@@ -17,14 +17,18 @@ public class Main {
         }
 
         for (int i = 1; i < n; i++) {
-            if(arr[i - 1] >= arr[i] || arr[i] < t) {
+            if(arr[i - 1] >= arr[i]) {
                 answer = Math.max(answer, temp);
+                if(arr[i] > t) {
+                    temp = 1;
+                    continue;
+                }
                 temp = 0;
                 continue;
             }
             temp++;
         }
-        
+
         answer = Math.max(answer, temp);
         System.out.println(answer);
     }
