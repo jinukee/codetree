@@ -12,23 +12,14 @@ public class Main {
         int answer = 0;
         int temp = 0;
 
-        if (arr[0] > t) {
-            answer = 1;
-        }
-
-        for (int i = 1; i < n; i++) {
-            if(arr[i - 1] >= arr[i]) {
+        for (int i = 0; i < n; i++) {
+            if (arr[i] <= t) {
                 answer = Math.max(answer, temp);
-                if(arr[i] > t) {
-                    temp = 1;
-                    continue;
-                }
                 temp = 0;
                 continue;
             }
             temp++;
         }
-
         answer = Math.max(answer, temp);
         System.out.println(answer);
     }
