@@ -51,6 +51,9 @@ public class Main {
             }
         }
 
+        if (N == 1 && M == 1) {
+            result = 2;
+        }
         System.out.println(result);
     }
 }
