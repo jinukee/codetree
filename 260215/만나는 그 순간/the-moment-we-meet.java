@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 public class Main {
-    private static final int[] A = new int[1_000];
-    private static final int[] B = new int[1_000];
+    private static final int[] A = new int[1_001];
+    private static final int[] B = new int[1_001];
     private static final Map<String, Integer> DIRECTION = new HashMap<>();
 
     static {
