@@ -10,7 +10,7 @@ public class Main {
         if(x2 < x3 || x4 < x1) {
             System.out.println("nonintersecting");
         }else {
-            System.out.println("intersecting")
+            System.out.println("intersecting");
         }
     }
 }
